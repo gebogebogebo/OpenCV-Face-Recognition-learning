@@ -73,8 +73,10 @@ testfaces,testids = getImagesAndLabels("testdata")
 for testface in testfaces:
     # テスト画像に対して予測実施
     label, confidence = recognizer.predict(testface)
+    confidencestr = "  {0}%".format(round(100 - confidence))
+
     # 予測結果をコンソール出力
-    print("Test Image: {}, Predicted Label: {}, Confidence: {}".format("test_files[i]", label, confidence))
+    print("Test Image: {}, Predicted Label: {}, Confidence: {}, Per: {}".format("test_files[i]", label, confidence,confidencestr))
     # テスト画像を表示
     #cv2.imshow("test image", test_images[i])
     #cv2.waitKey(300)
