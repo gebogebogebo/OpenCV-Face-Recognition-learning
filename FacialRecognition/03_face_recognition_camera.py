@@ -12,7 +12,7 @@ font = cv2.FONT_HERSHEY_SIMPLEX
 #iniciate id counter
 id = 0
 
-names = ['None', 'user1', 'user2', 'user3', 'user4', 'user5'] 
+names = ['None', 'gebo', 'micoco', 'user3', 'user4', 'user5'] 
 
 # Initialize and start realtime video capture
 cam = cv2.VideoCapture(0)
@@ -26,7 +26,7 @@ minH = 0.1*cam.get(4)
 while True:
 
     ret, img =cam.read()
-    img = cv2.flip(img, -1) # Flip vertically
+    # img = cv2.flip(img, -1) # Flip vertically
 
     gray = cv2.cvtColor(img,cv2.COLOR_BGR2GRAY)
 

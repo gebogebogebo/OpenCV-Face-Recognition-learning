@@ -14,10 +14,17 @@ print("\n [INFO] Initializing face capture. Look the camera and wait ...")
 # Initialize individual sampling face count
 count = 0
 
+# キャプチャ画像保存フォルダ作成
+if( os.path.exists("dataset") == False):
+    os.mkdir("dataset")
+
 while(True):
 
     ret, img = cam.read()
-    img = cv2.flip(img, -1) # flip video image vertically
+
+    # カメラを逆転させたい場合はコメントを解除しましょう
+    # img = cv2.flip(img, -1) # flip video image vertically
+
     gray = cv2.cvtColor(img, cv2.COLOR_BGR2GRAY)
     faces = face_detector.detectMultiScale(gray, 1.3, 5)
 
