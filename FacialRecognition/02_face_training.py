@@ -72,7 +72,9 @@ print("\n ここからトレーニングの結果をテストする")
 testfaces,testids = getImagesAndLabels("testdata")
 for testface in testfaces:
     # テスト画像に対して予測実施
+    # 確度（confidence）は、0に近いほうが確度が高い
     label, confidence = recognizer.predict(testface)
+    # 確度を%にする
     confidencestr = "  {0}%".format(round(100 - confidence))
 
     # 予測結果をコンソール出力
