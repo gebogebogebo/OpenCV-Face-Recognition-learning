@@ -26,5 +26,7 @@ setuptools            40.8.0
   - raspbian stretch (2019-04-08)
   - code-oss 1.29.0
   - Python 3.5.3
+    - opencv 3.4.4
+    
 
   
